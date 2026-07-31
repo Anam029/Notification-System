@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-async function Connection () {
+async function Connection(): Promise<void> {
   try {
     //console.log(process.env.MONGODB_URI);
 
