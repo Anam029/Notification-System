@@ -3,7 +3,7 @@ import session  from "express-session"
 import passport from "passport";
 import  "./config/passport.js"
 import cookieParser from "cookie-parser";
-
+import router from "./routers/oauth.routers.js";
 
 const app = express();
 
@@ -27,5 +27,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use("/auth",router)
 
 export default app;
