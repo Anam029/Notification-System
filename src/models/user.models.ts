@@ -4,13 +4,18 @@ import mongoose, {Schema, Document} from "mongoose";
    email: string;
    verifierId: string,
    avatar?: string
-
+    username: string
  }
 const userSchema = new Schema<IUser>({
    googleId:{
     type: String,
     required: true,
     unique: true
+   },
+   username:{
+      type: String,
+      required: true,
+      unique: true,
    },
    email:{
     type: String,
